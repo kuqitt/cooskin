@@ -81,6 +81,7 @@ module.exports = {
           "格式：站站查询 日期 城市名 城市名"
         ]
         T = m('车票查询功能',Tarray)
+        break;
       default:
         T = m('Cooskin',['系统提示：无效命令'])
         msg.say(T)
