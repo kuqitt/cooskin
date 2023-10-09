@@ -53,8 +53,8 @@ module.exports = {
       break;
       case "定时通知":
         Tarray = [
-          "1.设置通知",
-          "格式：设置通知 日期 时间 事件",
+          "1.添加通知",
+          "格式：添加通知 日期 时间 事件",
           "2.查看通知",
           "格式：查看通知 日期",
           "3.删除通知",
@@ -143,9 +143,9 @@ module.exports = {
             "状态" + ""
           ]
           if(result.code!=1){
-            Tarray[3] = "状态：失败"
+            Tarray[3] = "状态："+result.msg
           }else{
-            Tarray[3] = "状态：成功"
+            Tarray[3] = "状态："+result.msg
           }
           T = m("添加日记",Tarray)
         break;
