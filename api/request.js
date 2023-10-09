@@ -3,8 +3,13 @@ const axios = require('axios');
 const config = require('../src/config'); // 配置文件
 
 // 创建一个独立的axios实例
+if(config.apiUrl.type == 'online'){
+  baseURL = config.apiUrl.online
+}else{
+  baseURL = config.apiUrl.local
+}
 const service = axios.create({
-  baseURL: config.apiUrl.online,
+  baseURL: baseURL,
   headers: {
     'Content-Type': 'application/json;charset=UTF-8',
   },
