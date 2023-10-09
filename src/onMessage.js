@@ -40,7 +40,7 @@ const api = require('../api/module/user')
 const{m} = require("./tool")
 
 //加载help所有方法
-const {help,diary,weatherMsg,sleepTask,cashbook} = require("./help")
+const {help,diary,weatherMsg,sleepTask,cashbook,ticket} = require("./help")
 // 机器人名字
 const name = config.name
 // 管理群组列表
@@ -96,7 +96,8 @@ module.exports = bot => {
         if (await sleepTask(msg)) return
         // 记账本
         if (await cashbook(msg)) return
-
+        // 火车票
+        if (await ticket(msg)) return
         if (await help(msg)) return
 
         // 回复信息是关键字 “加群”
