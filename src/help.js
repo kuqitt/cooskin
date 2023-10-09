@@ -610,7 +610,8 @@ async ticket(msg){
       ]
       if(result.code!=1){
         Tarray[1] = "状态："+result.msg
-
+          T  = m("余票查询",Tarray)
+        break;
       }else{
         Tarray[1] = "状态："+result.msg
         content_text ='';
@@ -626,18 +627,34 @@ async ticket(msg){
               content_text+="历时："+element.costtime+'\n'
              
              //priceed，numed，priceyd，numyd，pricesw，numsw
-              content_text+="二等座："+element.priceed+'元 '+'余：'+element.numed+'张'+'\n'
-              content_text+="一等座："+element.priceyd+'元 '+'余：'+element.numyd+'张'+'\n'
-              content_text+="商务座："+element.pricesw+'元 '+'余：'+element.numsw+'张'+'\n'
+             //参数numed，numyd，numsw，不是数字则不显示张数
+              if(!isNaN(element.numed)){
+                content_text+="二等座："+element.priceed+'元 '+element.numed+'张'+'\n'
+              }else{
+                content_text+="二等座："+element.priceed+'元 余票：'+element.numsw+'\n'
+              }
+              if(!isNaN(element.numyd)){
+                content_text+="一等座："+element.priceyd+'元 '+element.numyd+'张'+'\n'
+              }else{
+                content_text+="一等座："+element.priceyd+'元 余票：'+element.numsw+'\n'
+              }
+              if(!isNaN(element.numsw)){
+                content_text+="商务座："+element.pricesw+'元 '+element.numsw+'张'+'\n'
+              }else{
+                content_text+="商务座："+element.pricesw+'元 余票：'+element.numsw+'\n'
+              }
               content_text+='\n'
             }
             );
+         Tarray[3] =content_text
+         T = m("余票查询",Tarray)
+         break;
         }
-        Tarray[3] =content_text
+        Tarray.push("系统提示："+result.msg)
       }
-
+      T = m("余票查询",Tarray)
       break;
-    case "车次查询":
+    case "车次":
       //判断长度
       if(msgTextArray.length!==2){
         T = m("车次查询功能",["系统提示:车次查询格式错误","格式:车次查询 日期 车次"])
@@ -662,13 +679,25 @@ async ticket(msg){
         Tarray[2] = "车次："+trainno
         Tarray[3] = result.data.startstation+'-'+result.data.endstation
         Tarray[4] = "类型："+result.data.typename
-        Tarray[5] =content_text
+        //路过站点
+        //result.data.list
+        if(result.data.list.length>=1){
+          result.data.list.forEach(element => {
+            content_text+='站点：'+element.station+'\n'
+            content_text+="到达时间："+element.arrivaltime+'\n'
+            content_text+="离站时间："+element.departuretime+'\n'
+            content_text+="停留时间："+element.stoptime+'分钟\n'
+            content_text+='\n'
+          })
+          Tarray[5] =content_text
+        }
       }
+      T = m("车次查询",Tarray)
       break;
-    case "站站查询":
+    case "站站":
       //判断长度
       if(msgTextArray.length!==3){
-        T = m("站站查询功能",["系统提示:站站查询格式错误","格式:站站查询 日期 城市名 城市名"])
+        T = m("站站查询功能",["系统提示:站站查询格式错误","格式:站站 日期 城市名 城市名"])
         break;
       }
       date = msgTextArray[0]
@@ -690,7 +719,7 @@ async ticket(msg){
       }else{
         Tarray[1] = "状态："+result.msg
         content_text ='';
-        Tarray[2] = "城市："+city+'-'+city2
+        Tarray[2] = "城市："+city+'-'+city2+'\n'
         if(result.data.list.length>=1){
             result.data.list.forEach(element => {
               content_text+='车次：'+element.trainno+'\n'
@@ -707,10 +736,12 @@ async ticket(msg){
               content_text+="二等座："+element.priceed+'元 '+'\n'
               content_text+="一等座："+element.priceyd+'元 '+'\n'
               content_text+="商务座："+element.pricesw+'元 '+'\n'
+              content_text+='\n'
             }
             );
         }
         Tarray[3] =content_text
+        T = m("站站查询",Tarray)
       }
         break;
         default:
