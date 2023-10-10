@@ -79,9 +79,9 @@
   }
   ```
  ## :two_hearts: 贡献
-   :saxophone: [Wecahty]('https://github.com/wechaty/wechaty/tree/main')
-
-   :saxophone: [Wecahty-puppet-padlocal]('https://github.com/wechaty/puppet-supports')
+ :saxophone: <a href="https://github.com/wechaty/wechaty/tree/main">Wecahty</a>
+    ·
+    :saxophone: <a href="https://github.com/wechaty/puppet-supports">Wecahty-puppet-padlocal</a>
 
  # 感谢wecahty官方框架支持 
 
