@@ -79,4 +79,12 @@
   }
   ```
  ## :two_hearts: 贡献
+   :saxophone: [Wecahty]('https://github.com/wechaty/wechaty/tree/main')
+
+   :saxophone: [Wecahty-puppet-padlocal]('https://github.com/wechaty/puppet-supports')
+
+ # 感谢wecahty官方框架支持 
+
+  ## 示例
+  ### 机器人功能
 
