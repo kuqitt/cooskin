@@ -1,11 +1,7 @@
 
 # 微信助手机器人 - wechaty-puppet-padlocal
 
-项目支持
-
 <!-- PROJECT SHIELDS -->
-显示github一系列标签
-  
   ![GitHub issues](https://img.shields.io/github/issues/kuqitt/wechaty_bot)
   ![GitHub forks](https://img.shields.io/github/forks/kuqitt/wechaty_bot)
   ![GitHub stars](https://img.shields.io/github/stars/kuqitt/wechaty_bot)
