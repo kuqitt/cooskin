@@ -74,7 +74,7 @@
     type :'online' //local 本地  online 线上
   }
   ```
- ## :two_hearts: 贡献
+## 贡献
  :saxophone: <a href="https://github.com/wechaty/wechaty/tree/main">Wecahty</a>
     ·
      :saxophone:<a href="https://github.com/wechaty/puppet-supports">Wecahty-puppet-padlocal</a>
