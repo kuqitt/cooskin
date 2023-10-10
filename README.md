@@ -4,13 +4,18 @@
 项目支持
 
 <!-- PROJECT SHIELDS -->
+显示github一系列标签
+  
+  ![GitHub issues](https://img.shields.io/github/issues/kuqitt/wechaty_bot)
+  ![GitHub forks](https://img.shields.io/github/forks/kuqitt/wechaty_bot)
+  ![GitHub stars](https://img.shields.io/github/stars/kuqitt/wechaty_bot)
+  ![GitHub license](https://img.shields.io/github/license/kuqitt/wechaty_bot)
+  ![GitHub All Releases](https://img.shields.io/github/downloads/kuqitt/wechaty_bot/total)
+  ![GitHub release (latest by date)](https://img.shields.io/github/v/release/kuqitt/wechaty_bot)
+  ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/kuqitt/wechaty_bot)
+  ![GitHub last commit](https://img.shields.io/github/last-commit/kuqitt/wechaty_bot)
+  ![GitHub top language](https://img.shields.io/github/languages/top/kuqitt/wechaty_bot)
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
 <br />
@@ -20,42 +25,56 @@
     <img src="./th.jpg" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">"完美的"README模板</h3>
+  <h3 align="center">大胆的尝试它</h3>
   <p align="center">
-    一个"完美的"README模板去快速开始你的项目！
+    定制机器人，给你无限可能
     <br />
-    <a href="https://github.com/shaojintian/Best_README_template"><strong>探索本项目的文档 »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/shaojintian/Best_README_template">查看Demo</a>
+    <a href="https://github.com/kuqitt/wechaty_bot/issues">报告Bug</a>
     ·
-    <a href="https://github.com/shaojintian/Best_README_template/issues">报告Bug</a>
-    ·
-    <a href="https://github.com/shaojintian/Best_README_template/issues">提出新特性</a>
+    <a href="https://github.com/kuqitt/wechaty_bot/issues">提出新特性</a>
   </p>
 
 </p>
 
-[Badges]
+## 目录
+ - [关于项目](#关于项目)
+  - [开始使用](#开始使用)
+  - [贡献](#贡献)
+  - [示例](#示例)
 
-## Introduction - 介绍
-### 
-
-### Summary - 概要
-
-### Features - 特性
-
-## Requirements - 必要条件（环境，对所有项目，和所有子模块和库的描述。）
-
-## 配置信息
-### 在src/config 中配置 你的token  和 apiUrl
-
-
-## 安装
-### npm install -y 
-## 启动
-### npm run serve
-
-## Changelog - 更新日志（一个简短的历史记录（更改，替换或者其他）。）
-
-## Support - 支持
+  ## 关于项目
+  ### 项目介绍
+  本项目是基于wechaty-puppet-padlocal的二次开发，主要是为了方便大家使用，提供了一些常用的功能，如：日记，记账本，定时通知，天气播报，车票查询等功能，后续会继续更新，欢迎大家提出宝贵的意见。
+  ## 开始使用
+  ### 安装
+  #### 拉取代码
+  ```sh
+  git clone https://github.com/kuqitt/wechaty_bot.git
+  ```
+  #### 安装依赖
+  ```sh
+  npm install
+  ```
+  #### 启动项目
+  ```sh
+  npm run serve
+  ```
+  ### 配置
+  #### 配置文件
+  ```sh
+  src/config.js
+  ```
+  #### 需要配置
+  ```sh
+  // 机器人名字
+  name: '小助手',
+  //机器人token
+  token：'你的token',
+  //接口地址
+  apiUrl:{
+    //线上请求地址
+    local:'http://localhost:8888',
+    online:'http://XX.XX.XX.XX',
+    type :'online' //local 本地  online 线上
+  }
+  ```
