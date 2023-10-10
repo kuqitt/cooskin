@@ -25,7 +25,7 @@ module.exports = {
   apiUrl:{
     //线上请求地址
     local:'http://localhost:8888',
-    online:'http://101.33.249.33:86',
+    online:'http://***.***.***.***',
     type :'online' //local 本地  online 线上
   }
 }
