@@ -81,10 +81,62 @@
  ## :two_hearts: 贡献
  :saxophone: <a href="https://github.com/wechaty/wechaty/tree/main">Wecahty</a>
     ·
-    :saxophone: <a href="https://github.com/wechaty/puppet-supports">Wecahty-puppet-padlocal</a>
+     :saxophone:<a href="https://github.com/wechaty/puppet-supports">Wecahty-puppet-padlocal</a>
 
  # 感谢wecahty官方框架支持 
 
   ## 示例
-  ### 机器人功能
+  ### 机器人体验 二维码
+   
+  <a href="https://github.com/kuqitt/wechaty_bot/">
+    <img src="./Demo.jpg" alt="Logo" width="300" height="300">
+  </a>
 
+  ### 机器人功能
+  #### 1.日记
+  ```sh
+  写日记
+    格式：写日记 日期 事件 内容
+  查看日记
+    格式：查看日记 日期
+  删除日记
+    格式：删除日记 日期
+  ```
+
+  #### 2.记账本
+  ```sh
+  添加记账
+    格式：添加记账 日期 名称 项目 金额
+  查看账单
+    格式：查看账单 日期
+  删除账单
+    格式：删除账单 日期
+  月统计
+    格式：月统计 月份
+  ```
+  #### 3.定时通知
+  ```sh
+  添加通知
+    格式：添加通知 日期 时间 事件
+  查看通知
+    格式：查看通知 日期
+  删除通知
+    格式：删除通知 日期
+  ```
+  #### 4.天气播报
+  ```sh
+  绑定城市
+    格式：绑定城市 城市名
+  天气
+    格式：天气 城市名 [绑定城市后不需要填写城市]
+  ```
+  #### 5.车票查询
+  ```sh
+  余票查询
+    格式：余票 日期 城市名 城市名
+  车次查询
+    格式：车次 日期 车次
+  站站查询
+    格式：站站 日期 城市名 城市名
+  ```
+#### 5.待添加

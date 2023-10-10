@@ -1,6 +1,7 @@
 module.exports = {
   // puppet_padplus Token
-  token: "puppet_padlocal_0681c5c3c0234e89bb4fc9adb06dc913",
+  
+  token: "puppet_padlocal_**********************",
   // 你的机器人名字
   name: "PadLocalDemo",
   // 房间/群聊
